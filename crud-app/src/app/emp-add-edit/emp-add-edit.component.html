@@ -1,0 +1,58 @@
+<div mat-dialog-title>
+    <h1>ADD TOOL</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Tool ID</mat-label>
+            <input matInput type="number" placeholder="Ex. #8419" formControlName="toolID">
+          </mat-form-field>
+    </div>
+
+    <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Graphite Block ID</mat-label>
+            <input matInput type="text" placeholder="Ex. GP32378" formControlName="graphiteBlockID">
+          </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Tool Quality</mat-label>
+            <mat-select formControlName="toolQuality">
+              <mat-option *ngFor="let val of quality" [value]="val">{{val}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Tool Size</mat-label>
+            <mat-select formControlName="toolSize">
+              <mat-option *ngFor="let val of sizes" [value]="val">{{val}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Location</mat-label>
+        <mat-select formControlName="location">
+          <mat-option *ngFor="let val of location" [value]="val">{{val}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Last Sharpened</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dateReceived">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="Submit"> {{data ? 'Update': 'Save'}} </button>
+    </div>
+</form>
