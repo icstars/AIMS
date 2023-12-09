@@ -10,16 +10,20 @@ server.use(bodyParser.json());
 server.use(express.urlencoded({ extended: true }));
 
 server.use(express.static("crud-app"));
-
+/*sending info to client same thing as saying getToolList(): Observable<any> {
+    return this._http.get('http://localhost:3000/tools');
+  }*/
 server.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
-// res.send a page / data - would i need to get my database showed here?
+// telling it how to connect to database
 const sequelize = new Sequelize('dummydata', 'root', 'password', {
   host: 'localhost',
   dialect: 'mysql'
 });
 
+
+//doing connection
 sequelize.authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');
@@ -27,6 +31,9 @@ sequelize.authenticate()
   .catch((error) => {
     console.error('Unable to connect to the database: ', error);
   });
+
+  //create a route for a client to give data to client- get
+
 
 const Tool = sequelize.define('Tool', {
   id: {
