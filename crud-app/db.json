@@ -1,0 +1,102 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tools": [
+    {
+      "toolID": 56789,
+      "graphiteBlockID": "GP5679",
+      "toolQuality": "Sharp",
+      "toolSize": "32\"",
+      "location": "Kansas City",
+      "dateReceived": "2023-11-17T06:00:00.000Z",
+      "id": 12
+    },
+    {
+      "toolID": 473899,
+      "graphiteBlockID": "GP73289",
+      "toolQuality": "Dull",
+      "toolSize": "32\"",
+      "location": "Keokuk",
+      "dateReceived": "2023-11-24T06:00:00.000Z",
+      "id": 13
+    },
+    {
+      "toolID": 473829,
+      "graphiteBlockID": "GP473920",
+      "toolQuality": "Dull",
+      "toolSize": "36\"",
+      "location": "Kansas City",
+      "dateReceived": "2023-11-24T06:00:00.000Z",
+      "id": 14
+    },
+    {
+      "toolID": 463782,
+      "graphiteBlockID": "GP473289",
+      "toolQuality": "Sharp",
+      "toolSize": "32\"",
+      "location": "Kansas City",
+      "dateReceived": "2023-12-15T06:00:00.000Z",
+      "id": 15
+    },
+    {
+      "toolID": 436728,
+      "graphiteBlockID": "GP47389",
+      "toolQuality": "Dull",
+      "toolSize": "36\"",
+      "location": "Keokuk",
+      "dateReceived": "2023-12-22T06:00:00.000Z",
+      "id": 16
+    },
+    {
+      "toolID": 4387,
+      "graphiteBlockID": "GP327489",
+      "toolQuality": "Scrap",
+      "toolSize": "32\"",
+      "location": "Columbus",
+      "dateReceived": "2023-12-04T06:00:00.000Z",
+      "id": 17
+    },
+    {
+      "toolID": 48932,
+      "graphiteBlockID": "GP47829",
+      "toolQuality": "Dull",
+      "toolSize": "42\"",
+      "location": "Keokuk",
+      "dateReceived": "2023-12-21T06:00:00.000Z",
+      "id": 18
+    },
+    {
+      "toolID": 437289,
+      "graphiteBlockID": "GP321789",
+      "toolQuality": "Sharp",
+      "toolSize": "36\"",
+      "location": "Keokuk",
+      "dateReceived": "2023-12-26T06:00:00.000Z",
+      "id": 19
+    },
+    {
+      "toolID": 372819,
+      "graphiteBlockID": "GP74389",
+      "toolQuality": "Sharp",
+      "toolSize": "32\"",
+      "location": "Kansas City",
+      "dateReceived": "2023-12-08T06:00:00.000Z",
+      "id": 20
+    }
+  ]
+}

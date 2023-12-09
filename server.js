@@ -16,7 +16,11 @@ server.use(express.static("crud-app"));
 server.get('/', (req, res) => {
   res.send('Welcome to my server!');
 });
+<<<<<<< HEAD
 // telling it how to connect to database
+=======
+// res.send a page / data - would i need to have my database showed here?
+>>>>>>> e352c1077b2cad8b28f847721e4b86a586809df3
 const sequelize = new Sequelize('dummydata', 'root', 'password', {
   host: 'localhost',
   dialect: 'mysql'

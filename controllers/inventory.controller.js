@@ -41,8 +41,8 @@ const sequelize = new Sequelize(
      sequelize.sync().then(() => {
         console.log('Inventory table created successfully!');
         inventory.create({
-            id: "3",
-            graphiteblock_id: 4567,
+            id: "4",
+            graphiteblock_id: 6666,
             tool_quality: "sharp",
             tool_size: 32,
             location: 'Kansas City',
