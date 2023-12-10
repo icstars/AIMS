@@ -39,12 +39,12 @@ export class EmpAddEditComponent implements OnInit{
     private _coreService: CoreService
     ) {
     this.empForm = this._fb.group({
-      toolID: '',
-      graphiteBlockID: '',
-      toolQuality: '',
-      toolSize: '',
+      id: '',
+      graphiteblock_id: '',
+      tool_quality: '',
+      tool_size: '',
       location: '',
-      dateReceived: '',
+      last_sharpened: '',
     });
   }
   ngOnInit(): void {
@@ -53,22 +53,22 @@ export class EmpAddEditComponent implements OnInit{
 
   //update tool
   onFormSubmit(){
-    if(this.empForm.valid){
-      if(this.data){
-        this._empService.updateTool(this.data.id, this.empForm.value)
-        .subscribe({
-          next: (val: any) => {
-            this._coreService.openSnackBar('Tool Detail Updated');
-            this._dialogRef.close(true);
-          },
-          error: (err: any) => {
-            console.error(err);
-          }
-        });
+     if(this.empForm.valid){
+       if(this.data){
+       this._empService.updateTool(this.data.id, this.empForm.value)
+         .subscribe({
+           next: (val: any) => {
+             this._coreService.openSnackBar('Tool Detail Updated');
+             this._dialogRef.close(true);
+           },
+           error: (err: any) => {
+             console.error(err);
+           }
+         });
 
-      } else {
+       } else {
 
-        this._empService.addTool(this.empForm.value).subscribe({
+       this._empService.addTool(this.empForm.value).subscribe({
           next: (val: any) => {
             alert('');
             this._coreService.openSnackBar('Tool Added Successfully');
@@ -80,7 +80,7 @@ export class EmpAddEditComponent implements OnInit{
         });
       }
     }
-  }
+   }
   }
  
 

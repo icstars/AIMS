@@ -21,13 +21,12 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 //form for tools
 export class AppComponent implements OnInit{
   displayedColumns: string[] = [
-  'id',
-  'toolID', 
-  'graphiteBlockID', 
-  'toolQuality', 
-  'toolSize',
+  'id', 
+  'graphiteblock_id', 
+  'tool_quality', 
+  'tool_size',
   'location',
-  'dateReceived',
+  'last_sharpened',
   'action',
 ];
   dataSource!: MatTableDataSource<any>;
@@ -52,7 +51,10 @@ export class AppComponent implements OnInit{
     private overlay: OverlayContainer,
     private observer: BreakpointObserver,
 
-  ) {}
+  ) {
+    this.getToolList();
+    console.log('made it');
+  }
 
   
 //sidenav bar function
@@ -83,8 +85,6 @@ export class AppComponent implements OnInit{
       }
     })
 
-
-
     this.getToolList();
   }
   
@@ -101,7 +101,7 @@ export class AppComponent implements OnInit{
   }
 
   getToolList() {
-    this._empService.getToolList().subscribe({
+    this._empService.getToolList2().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
@@ -121,15 +121,15 @@ export class AppComponent implements OnInit{
   }
 
   deleteTool(id: number) {
-    if(confirm('Are you sure you want to delete this tool?'))
+    // if(confirm('Are you sure you want to delete this tool?'))
     
-    this._empService.deleteTool(id).subscribe({
-      next: (res) => {
-        this._coreService.openSnackBar('Tool Deleted', 'done');
-        this.getToolList();
-      },
-      error: console.log,
-    });
+    // this._empService.deleteTool(id).subscribe({
+    //   next: (res) => {
+    //     this._coreService.openSnackBar('Tool Deleted', 'done');
+    //     this.getToolList();
+    //   },
+    //   error: console.log,
+    // });
   }
 
   openEditForm(data: any){
