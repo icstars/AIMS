@@ -101,7 +101,7 @@ export class AppComponent implements OnInit{
   }
 
   getToolList() {
-    this._empService.getToolList2().subscribe({
+    this._empService.getToolList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
