@@ -120,17 +120,21 @@ export class AppComponent implements OnInit{
     }
   }
 
-  deleteTool(id: number) {
-    // if(confirm('Are you sure you want to delete this tool?'))
+  deleteTool(data: any) {
+    console.log("app.component:", data)
+    let deleteTool = {id:data}
+    if(confirm('Are you sure you want to delete this tool?'))
     
-    // this._empService.deleteTool(id).subscribe({
-    //   next: (res) => {
-    //     this._coreService.openSnackBar('Tool Deleted', 'done');
-    //     this.getToolList();
-    //   },
-    //   error: console.log,
-    // });
+    this._empService.deleteTool(deleteTool).subscribe({
+      next: (res) => {
+        this._coreService.openSnackBar('Tool Deleted', 'done');
+        this.getToolList();
+      },
+      error: console.log,
+    });
   }
+
+  
 
   openEditForm(data: any){
     const dialogRef = this._dialog.open(EmpAddEditComponent, {

@@ -18,11 +18,11 @@ export class EmpAddEditComponent implements OnInit{
     'Dull',
     'Scrap',
   ];
-  sizes: string[] = [
-    '28"',
-    '32"',
-    '36"',
-    '42"',
+  sizes: number[] = [
+    28,
+    32,
+    36,
+    42,
   ];
   location: string[] = [
     'Columbus',
@@ -50,6 +50,8 @@ export class EmpAddEditComponent implements OnInit{
   ngOnInit(): void {
     this.empForm.patchValue(this.data);
   }
+  //delete tool
+ 
 
   //update tool
   onFormSubmit(){

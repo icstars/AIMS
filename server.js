@@ -17,6 +17,28 @@ server.use(express.static("crud-app"));
     return this._http.get('http://localhost:3000/tools');
   }*/
 
+  //deleting a tool-needs work
+
+  server.post('/tools/delete', async (req, res) => {
+    const { id } = req.body;
+  console.log(req.body);
+    try {
+      // Find the tool by ID
+      const tool = await Tool.findByPk(id);
+  
+      if (!tool) {
+        return res.status(404).json({ error: 'Tool not found' });
+      }
+      // Delete the tool
+      await tool.destroy();
+  
+      return res.status(200).json({ message: 'Tool deleted successfully' });
+    } catch (error) {
+      console.error('Error deleting tool:', error);
+      return res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
 server.get('/tools',(req,res)=> {
   sequelize.authenticate()
   .then(() => {
