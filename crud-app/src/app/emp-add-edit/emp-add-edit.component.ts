@@ -14,9 +14,9 @@ export class EmpAddEditComponent implements OnInit{
 
 
   quality: string[] = [
-    'Sharp',
-    'Dull',
-    'Scrap',
+    'sharp',
+    'dull',
+    'scrap',
   ];
   sizes: number[] = [
     28,
@@ -57,7 +57,7 @@ export class EmpAddEditComponent implements OnInit{
   onFormSubmit(){
      if(this.empForm.valid){
        if(this.data){
-       this._empService.updateTool(this.data.id, this.empForm.value)
+       this._empService.updateTool(this.empForm.value)
          .subscribe({
            next: (val: any) => {
              this._coreService.openSnackBar('Tool Detail Updated');
@@ -72,7 +72,7 @@ export class EmpAddEditComponent implements OnInit{
 
        this._empService.addTool(this.empForm.value).subscribe({
           next: (val: any) => {
-            alert('');
+            //alert('');
             this._coreService.openSnackBar('Tool Added Successfully');
             this._dialogRef.close(true);
           },

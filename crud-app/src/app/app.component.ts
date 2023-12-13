@@ -133,8 +133,9 @@ export class AppComponent implements OnInit{
       error: console.log,
     });
   }
-
+//to have the component actually get removed from the document. this is calling back the whole database to refresh. will not work for a big database
   
+
 
   openEditForm(data: any){
     const dialogRef = this._dialog.open(EmpAddEditComponent, {

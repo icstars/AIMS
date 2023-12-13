@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+  }
+
+  body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  
+  .container {
+    overflow: hidden;
+    width: 18.75rem;
+    background: #fff;
+    box-shadow:  0.3125rem 0.3125rem 0.4375rem  #A8A7A7,
+    -0.3125rem -0.3125rem 0.4375rem  #A8A7A7;
+    padding: 2.5rem;
+    border-radius: 3.125rem;
+    height: 28.125rem;
+    margin-top: 4.375rem;
+  }
+
+  .container .form-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .subtitle p{
+    color: #0064AA;
+    text-decoration: none;
+    font-size: 0.6375rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0.125rem;
+    text-align: center;
+    letter-spacing: 0.0625rem;
+  }
+/* */
+.inner-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-form .subtitle {
+  margin-top: 20px; /* Adjust as needed */
+  text-align: center;
+}
+
+.inner-form form {
+  width: 100%;
+}
+
+.inner-form .pin-login__text {
+  margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: block;
+    width: 60%;
+    font-size: 0.5em;
+    text-align:  center;
+    letter-spacing: 0.2em;
+    background: rgba(0, 0n, 0, 0.15);
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    cursor: default;
+}
+
+.inner-form .pin-login__key {
+  width: 40px;
+  height: 40px;
+  background: #0064AA;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin: 5px 9px;
+}
+
+.inner-form .pin-login__key:active {
+  background: white;
+    color: #0064AA;
+    border: 2px solid #0064AA;
+    transform: scale(1.05);
+}
+  .form-container .slider-control {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 98%;
+    margin: 0.0625rem 0.0625rem 0.125rem 0.125rem;
+    justify-content: space-between;
+    border: 0.0625rem solid lightgrey;
+    border-radius: 2.125rem;
+    overflow: hidden;
+    margin-bottom: 0.9375rem;
+  }
+  
+  .slider-control .slide {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.875rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .slider-control .slide-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    background: #0064AA;
+    border-radius: 2.125rem;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .slider-control .signup {
+    color: #0064AA;
+  }
+ 
+  #signup:checked ~ .slide-tab {
+    left: 50%;
+    width: 50%;
+  }
+  
+  #signup:checked ~ .signup {
+    color: #fff;
+  }
+  
+  #signup:checked ~ .login {
+    color: #0064AA;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="password"] {
+    background: #e1dfe9;
+  }
+
+  /*pin formatting center*/
+  .pin-login {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+
+@keyframes loginError {
+    25% { transform: translateX(-3px)}
+    75% { transform: translateX(3px)}
+}
+@-moz-keyframes loginError{
+    25% { transform: translateX(-3px)}
+    75% { transform: translateX(3px)}
+}
+
+
+/* @media starts here */
+    @media(max-width:400px){
+      footer img{
+          height: 3rem;
+      }
+    }
+  
+    .signup .subtitle {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .signup .pin-login__text {
+      margin-left: 30px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      padding: 10px;
+      display: block;
+      width: 60%;
+      font-size: 0.5em;
+      text-align: center;
+      letter-spacing: 0.2em;
+      background: rgba(0, 0, 0, 0.15);
+      border: none;
+      border-radius: 25px;
+      outline: none;
+      cursor: default;
+    }
+    
+    .signup .pin-login__key {
+      width: 40px;
+      height: 40px;
+      background: #0064AA;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      margin: 5px 9px;
+    }
+    
+    .signup .pin-login__key:active {
+      background: white;
+      color: #0064AA;
+      border: 2px solid #0064AA;
+      transform: scale(1.05);
+    }
