@@ -13,7 +13,12 @@ body {
 }
 
 body {
-  background-image: url(pexels-enric-cruz-lópez-7444978.jpg);
+  background: rgb(69, 64, 123);
+  background: radial-gradient(
+    circle,
+    rgba(69, 64, 123, 1) 0%,
+    rgba(86, 142, 185, 0.7904411764705882) 100%
+  );
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
