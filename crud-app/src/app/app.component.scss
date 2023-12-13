@@ -1,26 +1,26 @@
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.main-body {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1248px;
+  mat-form-field {
+    width: 100%;
   }
-  
-  .main-body {
-    padding-top: 20px;
-    margin: 0 auto;
-    max-width: 1248px;
-    mat-form-field {
-      width: 100%;
-    }
-  }
+}
 
 mat-toolbar {
   background: #004a9f;
-  color:white;
+  color: white;
 }
 
 mat-sidenav {
   margin: 16px;
   width: 200px;
   border-right: none;
-  background: rgba(30, 63, 133, 0.675);
+  background: rgba(88, 101, 159, 0.662);
   color: white;
   border-radius: 10px;
   padding: 16px;
@@ -44,7 +44,7 @@ mat-sidenav {
 mat-sidenav-container {
   height: calc(100vh - 65px);
 }
- 
+
 .menu-button {
   width: 100%;
   display: flex;
@@ -58,6 +58,6 @@ mat-sidenav-container {
 }
 
 .logout-button {
-    align-self: center;
-    margin-bottom: -660px; 
+  align-self: center;
+  margin-bottom: -660px;
 }

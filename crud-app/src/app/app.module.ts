@@ -26,29 +26,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { LoginComponent } from './login/login.component';
 
-
-
-
-
-
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    EmpAddEditComponent,
-    LoginComponent,
-    
-    
-    
-    
-  ],
+  declarations: [AppComponent, EmpAddEditComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule, 
-    MatIconModule, 
+    MatToolbarModule,
+    MatIconModule,
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
@@ -65,10 +50,8 @@ import { LoginComponent } from './login/login.component';
     MatSlideToggleModule,
     MatSidenavModule,
     MatDividerModule,
-    
-    
   ],
   providers: [],
-  bootstrap: [AppComponent] 
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
